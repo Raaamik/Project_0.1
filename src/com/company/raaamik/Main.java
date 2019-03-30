@@ -1,27 +1,19 @@
 package com.company.raaamik;
+
+import javax.swing.*;
 import java.util.Scanner;
 
-public class Main {
+public class Main extends JPanel {
 
     public static void main(String[] args) {
 
-        String kommand = new String("start");
+
+        String kommand = new String("h");
         int value = 0;
         Scanner scanner = new Scanner(System.in);
         FourDigitProgression firstfunktion = new FourDigitProgression();
-        System.out.println("-----------------------------------------------------------------------");
-        System.out.println("--  Вас приветствует учебная программа Алиева Рамиза               ----");
-        System.out.println("--  Что бы увидеть последовательность 1000,1003,1006 нажмите 1     ----");
-        System.out.println("--  Что бы увидеть последовательность 1,3,5,7,9,     нажмите 2     ----");
-        System.out.println("--  Что бы увидеть последовательность 90,85,80,75,70 нажмите 3     ----");
-        System.out.println("--  Что бы увидеть последовательность 2,4,8,16,32,64 нажмите 4     ----");
-        System.out.println("--  Что бы увидеть факториал натурального числа n    нажмите 5     ----");
-        System.out.println("--  Для выхода напишите exit                                       ----");
-        System.out.println("-----------------------------------------------------------------------");
-
 
         while(!kommand.equals("exit")){
-            kommand = scanner.nextLine();
             if (kommand.equals("1")){
                 System.out.println(firstfunktion.funktion1(1000));
             }
@@ -39,6 +31,24 @@ public class Main {
                 value = scanner.nextInt();
                 System.out.println(firstfunktion.funktion5(value));
             }
+            if (kommand.equals("h")) {
+                System.out.println("-----------------------------------------------------------------------");
+                System.out.println("--  Вас приветствует учебная программа Алиева Рамиза               ----");
+                System.out.println("--  Что бы увидеть последовательность 1000,1003,1006 нажмите 1     ----");
+                System.out.println("--  Что бы увидеть последовательность 1,3,5,7,9,     нажмите 2     ----");
+                System.out.println("--  Что бы увидеть последовательность 90,85,80,75,70 нажмите 3     ----");
+                System.out.println("--  Что бы увидеть последовательность 2,4,8,16,32,64 нажмите 4     ----");
+                System.out.println("--  Что бы увидеть факториал натурального числа n    нажмите 5     ----");
+                System.out.println("--  Для выхода напишите exit                                       ----");
+                System.out.println("-----------------------------------------------------------------------");
+
+            }
+            if ((!kommand.equals("1")) && (!kommand.equals("2")) && (!kommand.equals("3")) && (!kommand.equals("4")) && (!kommand.equals("5")) && (!kommand.equals("h"))) {
+                System.out.println("Вы ввели не правельные данные. Для вызова справки нажмите h.");
+            }
+            System.out.print("Віберите функцию : ");
+            kommand = scanner.nextLine();
+
 
 
         }
