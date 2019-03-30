@@ -48,4 +48,12 @@ public class FourDigitProgression {
         }
         return twoDigitMas;
     }
+
+    public int funktion5(int value) {
+        int rezult = 1;
+        for (int i = 1; i <= value; i++) {
+            rezult = rezult * i;
+        }
+        return rezult;
+    }
 }
