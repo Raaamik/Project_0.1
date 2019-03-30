@@ -43,10 +43,8 @@ public class Main extends JPanel {
                 System.out.println("-----------------------------------------------------------------------");
 
             }
-            if ((!kommand.equals("1")) && (!kommand.equals("2")) && (!kommand.equals("3")) && (!kommand.equals("4")) && (!kommand.equals("5")) && (!kommand.equals("h"))) {
-                System.out.println("Вы ввели не правельные данные. Для вызова справки нажмите h.");
-            }
-            System.out.print("Віберите функцию : ");
+
+            System.out.print("Выберите функцию : ");
             kommand = scanner.nextLine();
 
 
