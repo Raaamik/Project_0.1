@@ -1,5 +1,4 @@
 package com.company.raaamik;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -21,10 +20,10 @@ public class Main {
             kommand = scanner.nextLine();
             if (kommand.equals("1")){
                 firstfunktion.setValue(1000);
-                System.out.println(Arrays.toString(firstfunktion.getValue()));
+                System.out.println(firstfunktion.getValue());
             }
             if (kommand.equals("2")){
-                System.out.println(Arrays.toString(firstfunktion.funktion2()));
+                System.out.println(firstfunktion.funktion2());
             }
             /*if (kommand.equals("2")){
                 System.out.println(Arrays.toString(firstfunktion.funktion3(90)));
