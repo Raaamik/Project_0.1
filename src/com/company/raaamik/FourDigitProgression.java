@@ -4,23 +4,21 @@ import java.util.ArrayList;
 
 public class FourDigitProgression {
 
-    private ArrayList<Integer> valuemas = new ArrayList<Integer>();
     private ArrayList<Integer> twoDigitMas = new ArrayList<Integer>();
 
-    public ArrayList<Integer> getValue() {
-        return valuemas;
-    }
-
-    public void setValue(int value) {
+    public ArrayList<Integer> funktion1(int value) {
+        twoDigitMas.clear();
         for(int i = 0, j =0; i < 9000; i++){
             if(i % 3 == 0){
-                valuemas.add(j, value + i);
+                twoDigitMas.add(j, value + i);
                 j = j + 1;
             }
         }
+        return twoDigitMas;
     }
 
     public ArrayList<Integer> funktion2() {
+        twoDigitMas.clear();
         for(int i = 0, j = 0; j < 55; i++){
             if(i % 2 != 0){
                 twoDigitMas.add(j, i);
@@ -28,8 +26,26 @@ public class FourDigitProgression {
             }
         }
         return twoDigitMas;
-
     }
 
 
+    public ArrayList<Integer> funktion3(int i) {
+        twoDigitMas.clear();
+        for (int j = 0; i >= 0; i--) {
+            if (i % 5 == 0) {
+                twoDigitMas.add(j, i);
+                j++;
+            }
+        }
+        return twoDigitMas;
+    }
+
+    public ArrayList<Integer> funktion4(int i) {
+        twoDigitMas.clear();
+        for (int j = 0; j < 20; j++) {
+            twoDigitMas.add(j, i);
+            i = i * 2;
+        }
+        return twoDigitMas;
+    }
 }
