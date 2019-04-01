@@ -23,6 +23,9 @@ public class Lottery {
                 if (user == prog) {
                     System.out.println("Вы угадали!!!");
                 } else {
+                    if (Math.abs(user) == Math.abs(prog)) {
+                        System.out.println("Вы ошиблись со знаком");
+                    }
                     if (user >= -10 && user <= 10) {
                         System.out.print("Вы не угадали!!!");
                         if (prog < user) {
